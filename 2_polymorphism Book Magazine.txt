@@ -1,0 +1,43 @@
+import java.util.*;
+public class class2 {
+
+	public static void main(String[] args) {
+		book b=new book();
+		b.price();
+		b.ordercopies();
+		b.salecopy();
+	}
+
+}
+class publication{
+	String title;
+	int price,copies;
+	void salecopy() {}
+}
+class book{
+	String title,author;
+	int price,copies;
+	void price() {
+	Scanner c=new Scanner(System.in);
+	System.out.println("Enter Price of book: ");
+	price=c.nextInt();
+	
+	}
+	void salecopy() {
+		System.out.println("Total Sale is: "+ price*copies);
+	}
+	void ordercopies(){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter no of Copies: ");
+		copies=sc.nextInt();
+		System.out.println("Total ordered copies are : "+ copies);
+	}
+}
+class magazine{
+	String title;
+	int price,copies;
+	void salecopy() {}
+	void orderQty() {}
+	void Currentissue() {} 
+	void receiveissue(){}
+}

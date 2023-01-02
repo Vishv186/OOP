@@ -1,0 +1,42 @@
+
+
+import java.util.*;
+public class complex {
+	float real,img;
+	complex(){}
+	complex(float x,float y){
+		real=x;
+		img=y;
+	}
+	complex add(complex a) {
+		complex temp = new complex();
+		temp.real=this.real+a.real;
+		temp.img=this.img+a.img;
+		return temp;
+	}
+	complex sub(complex a) {
+		complex temp = new complex();
+		temp.real=this.real-a.real;
+		temp.img=this.img-a.img;
+		return temp;
+	}
+	public static void main(String args[]) {
+		Scanner se =new Scanner(System.in);
+		System.out.println("Enter 1st Complex number");
+		float a = se.nextFloat();
+		float b = se.nextFloat();
+		System.out.println("Enter 2nd Complex number");
+		float c = se.nextFloat();
+		float d = se.nextFloat();
+		System.out.println("1st Complex Number is "+a+" + "+b+"i");
+		System.out.println("2nd Complex Number is "+c+" + "+d+"i");
+		complex c1=new complex(a,b);
+		complex c2=new complex(c,d);
+		complex res;
+		res =c1.add(c2);
+		System.out.println( "Addition is "+ res.real+ " + " +res.img+"i"); 
+		res =c1.sub(c2);
+		System.out.println( "Subtraction is "+ res.real+ " + " +res.img+"i");
+	}
+
+}

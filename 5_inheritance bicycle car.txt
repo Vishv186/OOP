@@ -1,0 +1,83 @@
+import java.util.*;
+
+interface vehicles{
+	void gearchange();
+	void speedup();
+	void applybrakes();	
+}
+class bicycle implements vehicles{
+	public void gearchange() {
+		System.out.println("Gear change in bicycle");
+	}
+	public void speedup() {
+		System.out.println("Speed up the bicycle");
+	}
+	public void applybrakes() {
+		System.out.println("Apply brakes in bicycle");
+	}
+	
+}
+class bike implements vehicles{
+	public void gearchange() {
+		System.out.println("Gear change in bike");
+	}
+	public void speedup() {
+		System.out.println("Speed up the bike");
+	}
+	public void applybrakes() {
+		System.out.println("Apply brakes in bike");
+	}
+	
+}
+class car implements vehicles{
+	public void gearchange() {
+		System.out.println("Gear change in car");
+	}
+	public void speedup() {
+		System.out.println("Speed up the car");
+	}
+	public void applybrakes() {
+		System.out.println("Apply brakes in car");
+	}
+	
+}
+
+public class class5 {
+public static void main(String args []) {
+	Scanner sc=new Scanner(System.in);
+	int choice;
+	do {
+		System.out.println("\n******** Choose from below vehicles ********");
+		System.out.println("1. Bicycle. \n2. Bike. \n3.Car. \n4.Exit.");
+		System.out.print("Enter your choice: ");
+		choice=sc.nextInt();
+		switch (choice) {
+		case 1:
+			bicycle byc= new bicycle();
+			byc.gearchange();
+			byc.speedup();
+			byc.applybrakes();
+			break;
+		case 2:
+			bike bi=new bike();
+			bi.gearchange();
+			bi.speedup();
+			bi.applybrakes();
+			break;
+		case 3:
+			car c=new car();
+			c.gearchange();
+			c.speedup();
+			c.applybrakes();
+			break;
+		case 4:
+			System.out.println("Exited");
+			break;
+		default:
+			System.out.println("Invalid Input");
+			break;
+		}
+	}
+	while(choice!=4);
+
+}}

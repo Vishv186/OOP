@@ -1,0 +1,55 @@
+public class class3 {
+	public static void main(String args[]) {
+	team_lead t= new team_lead("Abhishek ",99000);
+	t.calculation();
+	Programmer p=new Programmer("Aditya",18000);
+	p.calculation();
+	
+	}
+}
+class employee{
+	String name,address;
+	int email,mob,phone,bp;
+	void calculation() {
+		float da,hra,pf,scf,gross;
+		da=97/100*bp;
+		hra=10/100*bp;
+		pf=12/100*bp;
+		scf=(0.1f/100)*bp;
+		gross=bp+da+hra-pf-scf;
+		System.out.println("Name:"+name);
+		System.out.println("Basic Salary:"+bp);
+		System.out.println("DA: "+da);
+		System.out.println("Gross Salary:"+gross);
+		
+		
+	}
+}
+class Programmer extends employee{
+	Programmer(String name,int sal){
+		this.name=name;
+		bp=sal;
+		
+	}
+	
+}
+class team_lead extends employee{
+	team_lead(String name,int sal){
+		this.name=name;
+		bp=sal;
+		
+	}
+}
+class apm extends employee{
+	apm(String name,int sal){
+		this.name=name;
+		bp=sal;
+		
+	}
+}
+class project_manager extends employee{
+	project_manager(String name,int sal){
+		this.name=name;
+		bp=sal;	
+	}
+}

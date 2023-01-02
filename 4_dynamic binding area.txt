@@ -1,0 +1,42 @@
+import java.util.*;
+public class class4 {
+
+	public static void main(String[] args) {
+		shape1 s=new triangle();
+		s.input();
+		s.compute_area();
+		
+		shape1 d=new rectangle();
+		d.input();
+		d.compute_area();
+	}
+
+
+}
+abstract class shape1{
+	double v1,v2;
+	void input() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter Value 1: ");
+		v1=sc.nextDouble();
+		System.out.println("Enter Value 2: ");
+		v2=sc.nextDouble();
+	}
+	abstract void compute_area();	
+}
+class triangle extends shape1{
+	void compute_area() {
+		double area;
+		area=0.5*v1*v2;
+		System.out.println("Area of triangle with base= "+v1+
+				" and height="+v2+" is= "+area);
+	}
+}
+class rectangle extends shape1{
+	void compute_area() {
+		double area;
+		area=v1*v2;
+		System.out.println("Area of rectangle with length= "+v1+
+				" and breadth="+v2+" is= "+area);
+	}
+}
